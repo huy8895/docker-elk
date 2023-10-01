@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -eu
+set -eu #Khi một lệnh trả về một giá trị lỗi, script sẽ tự động dừng lại.
 set -o pipefail
 
 source "${BASH_SOURCE[0]%/*}"/lib.sh
