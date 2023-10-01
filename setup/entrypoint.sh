@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-set -eu #Khi một lệnh trả về một giá trị lỗi, script sẽ tự động dừng lại.
+#set -e: Khi một lệnh trả về một giá trị lỗi, script sẽ tự động dừng lại.
+#set -u: Nếu bạn sử dụng một biến chưa được định nghĩa, script sẽ dừng lại và thông báo lỗi.
+set -eu
+
+#set -o pipefail: Nếu một phần của một đường ống (pipeline) trả về giá trị lỗi, toàn bộ đường ống sẽ được coi là lỗi.
 set -o pipefail
 
 source "${BASH_SOURCE[0]%/*}"/lib.sh
